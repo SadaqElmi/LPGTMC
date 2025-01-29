@@ -1,7 +1,7 @@
 const cars = [
   {
     id: 1,
-    carImage: "car1.jpg",
+    carImages: ["car1-1.jpg", "car1-2.jpg", "car1-3.jpg"],
     name: "Toyota Camry",
     year: 2022,
     capacity: 5,
@@ -13,7 +13,7 @@ const cars = [
   },
   {
     id: 2,
-    carImage: "car2.jpg",
+    carImages: ["car2-1.jpg", "car2-2.jpg", "car2-3.jpg"],
     name: "Honda Civic",
     year: 2021,
     capacity: 5,
@@ -25,7 +25,7 @@ const cars = [
   },
   {
     id: 3,
-    carImage: "car3.jpg",
+    carImages: ["car3-1.jpg", "car3-2.jpg", "car3-3.jpg"],
     name: "Ford Mustang",
     year: 2023,
     capacity: 4,
@@ -37,7 +37,7 @@ const cars = [
   },
   {
     id: 4,
-    carImage: "car4.jpg",
+    carImages: ["car4-1.jpg", "car4-2.jpg", "car4-3.jpg"],
     name: "Tesla Model S",
     year: 2024,
     capacity: 5,
@@ -49,7 +49,7 @@ const cars = [
   },
   {
     id: 5,
-    carImage: "car5.jpg",
+    carImages: ["car5-1.jpg", "car5-2.jpg", "car5-3.jpg"],
     name: "Jeep Wrangler",
     year: 2020,
     capacity: 5,
@@ -61,7 +61,7 @@ const cars = [
   },
   {
     id: 6,
-    carImage: "car6.jpg",
+    carImages: ["car6-1.jpg", "car6-2.jpg", "car6-3.jpg"],
     name: "Chevrolet Malibu",
     year: 2019,
     capacity: 5,
@@ -73,7 +73,7 @@ const cars = [
   },
   {
     id: 7,
-    carImage: "car7.jpg",
+    carImages: ["car7-1.jpg", "car7-2.jpg", "car7-3.jpg"],
     name: "BMW 3 Series",
     year: 2022,
     capacity: 5,
@@ -85,7 +85,7 @@ const cars = [
   },
   {
     id: 8,
-    carImage: "car8.jpg",
+    carImages: ["car8-1.jpg", "car8-2.jpg", "car8-3.jpg"],
     name: "Mercedes-Benz C-Class",
     year: 2023,
     capacity: 5,
@@ -97,7 +97,7 @@ const cars = [
   },
   {
     id: 9,
-    carImage: "car9.jpg",
+    carImages: ["car9-1.jpg", "car9-2.jpg", "car9-3.jpg"],
     name: "Audi A4",
     year: 2021,
     capacity: 5,
@@ -109,7 +109,7 @@ const cars = [
   },
   {
     id: 10,
-    carImage: "car10.jpg",
+    carImages: ["car10-1.jpg", "car10-2.jpg", "car10-3.jpg"],
     name: "Hyundai Sonata",
     year: 2020,
     capacity: 5,
@@ -118,127 +118,6 @@ const cars = [
     transmission: "Automatic",
     price: "$27,000",
     favorite: false
-  },
-  {
-    id: 11,
-    carImage: "car11.jpg",
-    name: "Kia Optima",
-    year: 2019,
-    capacity: 5,
-    speed: "190 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$26,000",
-    favorite: false
-  },
-  {
-    id: 12,
-    carImage: "car12.jpg",
-    name: "Subaru Outback",
-    year: 2023,
-    capacity: 5,
-    speed: "210 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$36,000",
-    favorite: false
-  },
-  {
-    id: 13,
-    carImage: "car13.jpg",
-    name: "Nissan Altima",
-    year: 2021,
-    capacity: 5,
-    speed: "205 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$29,000",
-    favorite: false
-  },
-  {
-    id: 14,
-    carImage: "car14.jpg",
-    name: "Volkswagen Passat",
-    year: 2020,
-    capacity: 5,
-    speed: "220 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$31,000",
-    favorite: false
-  },
-  {
-    id: 15,
-    carImage: "car15.jpg",
-    name: "Mazda6",
-    year: 2022,
-    capacity: 5,
-    speed: "215 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$30,000",
-    favorite: false
-  },
-  {
-    id: 16,
-    carImage: "car16.jpg",
-    name: "Dodge Charger",
-    year: 2023,
-    capacity: 5,
-    speed: "260 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$42,000",
-    favorite: false
-  },
-  {
-    id: 17,
-    carImage: "car17.jpg",
-    name: "Lexus ES",
-    year: 2022,
-    capacity: 5,
-    speed: "225 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$41,000",
-    favorite: false
-  },
-  {
-    id: 18,
-    carImage: "car18.jpg",
-    name: "Volvo S60",
-    year: 2021,
-    capacity: 5,
-    speed: "230 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$44,000",
-    favorite: false
-  },
-  {
-    id: 19,
-    carImage: "car19.jpg",
-    name: "Porsche Panamera",
-    year: 2023,
-    capacity: 4,
-    speed: "315 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$90,000",
-    favorite: false
-  },
-  {
-    id: 20,
-    carImage: "car20.jpg",
-    name: "Jaguar XF",
-    year: 2020,
-    capacity: 5,
-    speed: "250 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$53,000",
-    favorite: false
   }
 ];
-
 
