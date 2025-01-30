@@ -1,4 +1,4 @@
-const blogs = [
+export const Blogs = [
   {
     id: 1,
     category: "car",
