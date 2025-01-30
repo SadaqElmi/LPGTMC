@@ -47,7 +47,7 @@ import car16_1 from "../assets/images/car16-1.jpg";
 import car16_2 from "../assets/images/car16-2.jpg";
 import car16_3 from "../assets/images/car16-3.jpg";
 
-const cars = [
+export const Cars = [
   {
     id: 1,
     brand: "Toyota",

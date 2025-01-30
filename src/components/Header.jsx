@@ -1,8 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { BiUser } from "react-icons/bi";
-import { LuBuilding2, LuLogIn, LuSettings } from "react-icons/lu";
+import {
+  LuBuilding2,
+  LuChevronDown,
+  LuLogIn,
+  LuSettings,
+} from "react-icons/lu";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/Logo/logo.svg";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -75,12 +80,17 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-around items-center p-4 bg-gray-100 ">
+      <header className="flex justify-around items-center p-4 bg-[#edf1f7] h-[70px] ">
         <nav>
-          <div className="Logo">Waxdex</div>
+          <img src={Logo} alt={Logo} />
         </nav>
         <div className="flex justify-around items-center gap-4">
-          <Link to="/">Home</Link>
+          <Link
+            to="/"
+            className="text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400 font-['Nunito', sans-serif]"
+          >
+            Home
+          </Link>
           <div
             style={{ position: "relative", display: "inline-block" }}
             ref={dropdownRef}
@@ -88,9 +98,12 @@ const Header = () => {
             {/* Button to toggle the dropdown */}
             <button
               onClick={toggleDropdown}
-              style={{ padding: "10px", cursor: "pointer" }}
+              className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] flex items-center gap-1 hover:text-blue-400"
             >
               Cars
+              <span>
+                <LuChevronDown />
+              </span>
             </button>
 
             {/* Dropdown list */}
@@ -98,27 +111,46 @@ const Header = () => {
               <ul
                 style={{
                   position: "absolute",
-                  top: "100%",
-                  left: 0,
-                  backgroundColor: "#f9f9f9",
-                  border: "1px solid #ccc",
+                  top: "130%",
+                  left: "-50px",
+                  borderRadius: "15px",
+                  background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
-                  padding: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "10px",
                   margin: 0,
                   width: "150px",
                   boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
                 }}
               >
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Cars</Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400 "
+                  >
+                    Cars
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">CarDetails</Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    CarDetails
+                  </Link>
                 </li>
               </ul>
             )}
           </div>
-          <Link to="/">HelpCenter</Link>
+          <Link
+            to="/"
+            className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+          >
+            HelpCenter
+          </Link>
           <div
             style={{ position: "relative", display: "inline-block" }}
             ref={dropPages}
@@ -126,44 +158,80 @@ const Header = () => {
             {/* Button to toggle the dropdown */}
             <button
               onClick={togglePages}
-              style={{ padding: "10px", cursor: "pointer" }}
+              className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-1"
             >
               Pages
+              <span>
+                <LuChevronDown />
+              </span>
             </button>
-
             {/* Dropdown list */}
             {isPages && (
               <ul
                 style={{
                   position: "absolute",
-                  top: "100%",
-                  left: 0,
-                  backgroundColor: "#f9f9f9",
-                  border: "1px solid #ccc",
+                  top: "130%",
+                  left: "-50px",
+                  borderRadius: "15px",
+                  background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
-                  padding: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "10px",
                   margin: 0,
                   width: "150px",
                   boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
                 }}
               >
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">About Us </Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    About Us
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Account </Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    Account
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Blogs</Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    Blogs
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Article</Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    Article
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Princing Plans </Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    Princing Plans
+                  </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/">Contacts </Link>
+                <li>
+                  <Link
+                    to="/"
+                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                  >
+                    Contacts
+                  </Link>
                 </li>
               </ul>
             )}
@@ -175,7 +243,7 @@ const Header = () => {
             <span className="text-[10px]"> Mom - Sat: 9:00 am - 6:00 pm</span>
           </div>
           <button className="bg-blue-500 text-white px-4 py-2 rounded-xl">
-            <Link to="/">Cars</Link>{" "}
+            <Link to="/">Cars</Link>
           </button>
           <div
             style={{ position: "relative", display: "inline-block" }}
@@ -192,37 +260,53 @@ const Header = () => {
               <ul
                 style={{
                   position: "absolute",
-                  top: "100%",
-                  left: 0,
-                  backgroundColor: "#f9f9f9",
-                  border: "1px solid #ccc",
+                  top: "130%",
+                  left: "-50px",
+                  borderRadius: "15px",
+                  background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
-                  padding: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "10px",
                   margin: 0,
                   width: "150px",
                   boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
                 }}
               >
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/" className="flex items-center gap-2">
+                <li>
+                  <Link
+                    to="/"
+                    className="cursor-pointer font-['Nunito', sans-serif] text-[15px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-2"
+                  >
                     <BiUser />
                     <span>My Account</span>
                   </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/" className="flex items-center gap-2">
+                <li>
+                  <Link
+                    to="/"
+                    className="cursor-pointer font-['Nunito', sans-serif] text-[15px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-2"
+                  >
                     <LuBuilding2 />
                     <span>Billing</span>
                   </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/" className="flex items-center gap-2">
+                <li>
+                  <Link
+                    to="/"
+                    className="cursor-pointer font-['Nunito', sans-serif] text-[15px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-2"
+                  >
                     <LuSettings />
                     <span>Setting</span>
                   </Link>
                 </li>
-                <li style={{ padding: "10px", cursor: "pointer" }}>
-                  <Link to="/" className="flex items-center gap-2">
+                <li>
+                  <Link
+                    to="/"
+                    className="cursor-pointer font-['Nunito', sans-serif] text-[15px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-2"
+                  >
                     <LuLogIn />
                     <span>Sing Out</span>
                   </Link>
