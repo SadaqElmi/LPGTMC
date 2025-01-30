@@ -113,7 +113,7 @@ const Header = () => {
                   position: "absolute",
                   top: "130%",
                   left: "-50px",
-                  borderRadius: "15px",
+                  borderRadius: "20px",
                   background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
                   display: "flex",
@@ -123,7 +123,8 @@ const Header = () => {
                   padding: "10px",
                   margin: 0,
                   width: "150px",
-                  boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                  boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
+                  border: "1px solid #ffffff",
                 }}
               >
                 <li>
@@ -172,7 +173,7 @@ const Header = () => {
                   position: "absolute",
                   top: "130%",
                   left: "-50px",
-                  borderRadius: "15px",
+                  borderRadius: "20px",
                   background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
                   display: "flex",
@@ -182,7 +183,8 @@ const Header = () => {
                   padding: "10px",
                   margin: 0,
                   width: "150px",
-                  boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                  boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
+                  border: "1px solid #ffffff",
                 }}
               >
                 <li>
@@ -239,11 +241,16 @@ const Header = () => {
         </div>
         <div className="flex justify-around items-center gap-6">
           <div className="flex flex-col items-center ">
-            <span className="text-[15px]">8 800 234 56 78</span>
-            <span className="text-[10px]"> Mom - Sat: 9:00 am - 6:00 pm</span>
+            <span className="text-[18px] font-['Nunito', sans-serif]">
+              8 800 234 56 78
+            </span>
+            <span className="text-[10px] text-[#4e5d78]">
+              {" "}
+              Mom - Sat: 9:00 am - 6:00 pm
+            </span>
           </div>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-xl">
-            <Link to="/">Cars</Link>
+          <button className="bg-[#189cf4] text-white px-4 py-2 rounded-xl">
+            <Link to="/">Explore cars</Link>
           </button>
           <div
             style={{ position: "relative", display: "inline-block" }}
@@ -251,7 +258,7 @@ const Header = () => {
           >
             <button
               onClick={toggleLeft}
-              className="p-[10px] cursor-pointer bg-white text-blue-400 rounded-xl"
+              className="p-[10px] cursor-pointer bg-white hover:text-blue-400 rounded-xl"
             >
               <BiUser className="text-[20px]" />
             </button>
@@ -262,7 +269,7 @@ const Header = () => {
                   position: "absolute",
                   top: "130%",
                   left: "-50px",
-                  borderRadius: "15px",
+                  borderRadius: "20px",
                   background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
                   listStyle: "none",
                   display: "flex",
@@ -272,7 +279,8 @@ const Header = () => {
                   padding: "10px",
                   margin: 0,
                   width: "150px",
-                  boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+                  boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
+                  border: "1px solid #ffffff",
                 }}
               >
                 <li>
