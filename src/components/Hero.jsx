@@ -1,8 +1,6 @@
 import React from 'react'
 import HeroImage from "/src/Assets/images/Heroimage.png";
 
-
-
 const Hero = () => {
   return (
     
