@@ -1,51 +1,39 @@
-import car1_1 from "../Assets/Images/car1-1.jpg";
-import car1_2 from "../assets/images/car1-2.jpg";
-import car1_3 from "../assets/images/car1-3.jpg";
-import car2_1 from "../assets/images/car2-1.jpg";
-import car2_2 from "../assets/images/car2-2.jpg";
-import car2_3 from "../assets/images/car2-3.jpg";
-import car3_1 from "../assets/images/car3-1.jpg";
-import car3_2 from "../assets/images/car3-2.jpg";
-import car3_3 from "../assets/images/car3-3.jpg";
-import car4_1 from "../assets/images/car4-1.jpg";
-import car4_2 from "../assets/images/car4-2.jpg";
-import car4_3 from "../assets/images/car4-3.jpg";
-import car5_1 from "../assets/images/car5-1.jpg";
-import car5_2 from "../assets/images/car5-2.jpg";
-import car5_3 from "../assets/images/car5-3.jpg";
-import car6_1 from "../assets/images/car6-1.jpg";
-import car6_2 from "../assets/images/car6-2.jpg";
-import car6_3 from "../assets/images/car6-3.jpg";
-import car7_1 from "../assets/images/car7-1.jpg";
-import car7_2 from "../assets/images/car7-2.jpg";
-import car7_3 from "../assets/images/car7-3.jpg";
-import car8_1 from "../assets/images/car8-1.jpg";
-import car8_2 from "../assets/images/car8-2.jpg";
-import car8_3 from "../assets/images/car8-3.jpg";
-import car9_1 from "../assets/images/car9-1.jpg";
-import car9_2 from "../assets/images/car9-2.jpg";
-import car9_3 from "../assets/images/car9-3.jpg";
-import car10_1 from "../assets/images/car10-1.jpg";
-import car10_2 from "../assets/images/car10-2.jpg";
-import car10_3 from "../assets/images/car10-3.jpg";
-import car11_1 from "../assets/images/car11-1.jpg";
-import car11_2 from "../assets/images/car11-2.jpg";
-import car11_3 from "../assets/images/car11-3.jpg";
-import car12_1 from "../assets/images/car12-1.jpg";
-import car12_2 from "../assets/images/car12-2.jpg";
-import car12_3 from "../assets/images/car12-3.jpg";
-import car13_1 from "../assets/images/car13-1.jpg";
-import car13_2 from "../assets/images/car13-2.jpg";
-import car13_3 from "../assets/images/car13-3.jpg";
-import car14_1 from "../assets/images/car14-1.jpg";
-import car14_2 from "../assets/images/car14-2.jpg";
-import car14_3 from "../assets/images/car14-3.jpg";
-import car15_1 from "../assets/images/car15-1.jpg";
-import car15_2 from "../assets/images/car15-2.jpg";
-import car15_3 from "../assets/images/car15-3.jpg";
-import car16_1 from "../assets/images/car16-1.jpg";
-import car16_2 from "../assets/images/car16-2.jpg";
-import car16_3 from "../assets/images/car16-3.jpg";
+import car1_1 from "../Assets/Images/Cars/1-1.jpg";
+import car1_2 from "../assets/Images/Cars/1-2.jpg";
+import car1_3 from "../assets/Images/Cars/1-3.jpg";
+import car2_1 from "../assets/Images/Cars/2-1.jpg";
+import car2_2 from "../assets/Images/Cars/2-2.jpg";
+import car2_3 from "../assets/Images/Cars/2-3.jpg";
+import car3_1 from "../assets/Images/Cars/3-1.jpg";
+import car3_2 from "../assets/Images/Cars/3-2.jpg";
+import car3_3 from "../assets/Images/Cars/3-3.jpg";
+import car4_1 from "../assets/Images/Cars/4-1.jpg";
+import car4_2 from "../assets/Images/Cars/4-2.jpg";
+import car4_3 from "../assets/Images/Cars/4-3.jpg";
+import car5_1 from "../assets/Images/Cars/5-1.jpg";
+import car5_2 from "../assets/Images/Cars/5-2.jpg";
+import car5_3 from "../assets/Images/Cars/5-3.jpg";
+import car6_1 from "../assets/Images/Cars/6-1.jpeg";
+import car6_2 from "../assets/Images/Cars/6-2.jpeg";
+import car6_3 from "../assets/Images/Cars/6-3.jpeg";
+import car7_1 from "../assets/Images/Cars/6-1.jpg";
+import car7_2 from "../assets/Images/Cars/6-2.jpg";
+import car7_3 from "../assets/Images/Cars/6-3.jpg";
+import car8_1 from "../assets/Images/Cars/7- 1.jpeg";
+import car8_2 from "../assets/Images/Cars/7- 2.jpeg";
+import car8_3 from "../assets/Images/Cars/7- 3.jpeg";
+import car9_1 from "../assets/Images/Cars/8-1.jpeg";
+import car9_2 from "../assets/Images/Cars/8-2.jpeg";
+import car9_3 from "../assets/Images/Cars/8-3.jpeg";
+import car10_1 from "../assets/Images/Cars/9- 1.jpeg";
+import car10_2 from "../assets/Images/Cars/9- 2.jpeg";
+import car10_3 from "../assets/Images/Cars/9- 3.jpeg";
+import car11_1 from "../assets/Images/Cars/10-1.jpeg";
+import car11_2 from "../assets/Images/Cars/10-2.jpeg";
+import car11_3 from "../assets/Images/Cars/10-3.jpeg";
+import car12_1 from "../assets/Images/Cars/11-1.jpg";
+import car12_2 from "../assets/Images/Cars/11-2.jpg";
+import car12_3 from "../assets/Images/Cars/11-3.jpg";
 
 export const Cars = [
   {
@@ -202,58 +190,6 @@ export const Cars = [
     gas: "Petrol",
     transmission: "Automatic",
     price: "$36,000",
-    favorite: false,
-  },
-  {
-    id: 13,
-    brand: "Nissan",
-    carImages: [car13_1, car13_2, car13_3],
-    name: "Nissan Altima",
-    year: 2021,
-    capacity: 5,
-    speed: "205 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$29,000",
-    favorite: false,
-  },
-  {
-    id: 14,
-    brand: "Volkswagen",
-    carImages: [car14_1, car14_2, car14_3],
-    name: "Volkswagen Passat",
-    year: 2020,
-    capacity: 5,
-    speed: "220 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$31,000",
-    favorite: false,
-  },
-  {
-    id: 15,
-    brand: "Mazda",
-    carImages: [car15_1, car15_2, car15_3],
-    name: "Mazda6",
-    year: 2022,
-    capacity: 5,
-    speed: "215 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$30,000",
-    favorite: false,
-  },
-  {
-    id: 16,
-    brand: "Dodge",
-    carImages: [car16_1, car16_2, car16_3],
-    name: "Dodge Charger",
-    year: 2023,
-    capacity: 5,
-    speed: "260 km/h",
-    gas: "Petrol",
-    transmission: "Automatic",
-    price: "$42,000",
     favorite: false,
   },
 ];
