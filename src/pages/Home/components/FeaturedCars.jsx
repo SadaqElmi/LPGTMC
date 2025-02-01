@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { FaArrowRight, FaArrowLeft, FaUser, FaLeaf, FaCar, FaCog, FaHeart } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaArrowRight, FaArrowLeft, FaUser, FaLeaf, FaCar, FaCog, FaGasPump, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Cars } from "../../../data/Car_data"; // Ensure this path is correct
 import { CiHeart } from "react-icons/ci";
@@ -19,23 +19,14 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
     );
   };
 
-  // Auto slide the images every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [currentImageIndex]);
-
   return (
-    <div className="max-w-sm bg-[#edf1f7] border-4 border-white rounded-2xl shadow-lg overflow-hidden mx-2 group">
+    <div className="max-w-sm bg-[#edf1f7] border-2 border-white rounded-2xl shadow-lg overflow-hidden mx-2 group">
       <div className="relative">
         {/* Image */}
         <img
           src={carImages[currentImageIndex]}
           alt={`${title} ${currentImageIndex + 1}`}
-          className="w-full h-60 object-cover rounded-t-2xl transition-opacity duration-500"
+          className="w-full h-[250px] object-cover p-2 rounded-2xl transition-opacity duration-500"
         />
         {/* Left Arrow as Link */}
         <Link
@@ -76,7 +67,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             {capacity}
           </div>
           <div className="flex items-center mr-32">
-            <FaLeaf className="mr-2 text-blue-400" />
+            <FaGasPump className="mr-2 text-blue-400" />
             {hybrid}
           </div>
         </div>
@@ -90,7 +81,9 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             {transmission}
           </div>
         </div>
+      <hr className="text-gray-300 text-xl mt-6" />
         <div className="mt-6 flex justify-between items-center">
+          
           <p className="text-lg font-bold text-gray-800">{price}</p>
           <div className="flex items-center gap-2">
             <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">

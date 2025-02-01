@@ -10,7 +10,7 @@ const GetStarted = () => {
     <div className="bg-[#edf1f7] pt-10">
         <h1 className='text-3xl ml-28 text-gray-700 mt-8'>Get started with 4 simple steps</h1>
       {/* Information Section */}
-      <div className="sm:flex justify-center gap-10 h-[400px] mt-14">
+      <div className="flex justify-center gap-8 h-[400px] mt-14">
         {/* Info Box 1 */}
         <div className="sm:w-[300px] sm:h-[230px] p-6 shadow-lg rounded-2xl border-1 border-white   bg-[#edf1f7] hover:scale-105 transform transition-all duration-300">
           <div>
