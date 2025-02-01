@@ -108,27 +108,26 @@ const Header = () => {
 
             {/* Dropdown list */}
             {isOpen && (
-  <ul
-    style={{
-      position: "absolute",
-      top: "130%",
-      left: "-50px",
-      borderRadius: "20px",
-      background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
-      listStyle: "none",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      gap: "10px",
-      padding: "10px",
-      margin: 0,
-      width: "150px",
-      boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
-      border: "1px solid #ffffff",
-      zIndex: 9999, // Add a high z-index
-    }}
-  >
-
+              <ul
+                style={{
+                  position: "absolute",
+                  top: "130%",
+                  left: "-50px",
+                  borderRadius: "20px",
+                  background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
+                  listStyle: "none",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "10px",
+                  margin: 0,
+                  width: "150px",
+                  boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
+                  border: "1px solid #ffffff",
+                  zIndex: 9999, // Add a high z-index
+                }}
+              >
                 <li>
                   <Link
                     to="/"
@@ -171,27 +170,25 @@ const Header = () => {
             {/* Dropdown list */}
             {isPages && (
               <ul
-              style={{
-                position: "absolute",
-                top: "130%",
-                left: "-50px",
-                borderRadius: "20px",
-                background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
-                listStyle: "none",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "10px",
-                padding: "10px",
-                margin: 0,
-                width: "150px",
-                boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
-                border: "1px solid #ffffff",
-                zIndex: 50, // Ensures it appears on top
-              }}
-            >
-            
-              
+                style={{
+                  position: "absolute",
+                  top: "130%",
+                  left: "-50px",
+                  borderRadius: "20px",
+                  background: "linear-gradient(1turn, #f1f6fd 30%, #edf1f7)",
+                  listStyle: "none",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  gap: "10px",
+                  padding: "10px",
+                  margin: 0,
+                  width: "150px",
+                  boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
+                  border: "1px solid #ffffff",
+                  zIndex: 50, // Ensures it appears on top
+                }}
+              >
                 <li>
                   <Link
                     to="/"
@@ -210,7 +207,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    to="/"
+                    to="/Blogs"
                     className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
                   >
                     Blogs
