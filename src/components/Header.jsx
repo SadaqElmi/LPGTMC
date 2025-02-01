@@ -147,7 +147,7 @@ const Header = () => {
             )}
           </div>
           <Link
-            to="/"
+            to="/HelperPage"
             className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
           >
             HelpCenter
