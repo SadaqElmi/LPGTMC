@@ -66,7 +66,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             <FaUser className="mr-2 text-blue-400" />
             {capacity}
           </div>
-          <div className="flex items-center mr-24">
+          <div className="flex items-center mr-32">
             <FaGasPump className="mr-2 text-blue-400" />
             {hybrid}
           </div>
