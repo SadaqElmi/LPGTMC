@@ -186,7 +186,7 @@ const Header = () => {
                   width: "150px",
                   boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
                   border: "1px solid #ffffff",
-                  zIndex: 50, // Ensures it appears on top
+                  zIndex: 9999,
                 }}
               >
                 <li>
@@ -283,6 +283,7 @@ const Header = () => {
                   width: "150px",
                   boxShadow: "0px 1px 1px 0px rgba(0,0,0,0.1)",
                   border: "1px solid #ffffff",
+                  zIndex: 9999,
                 }}
               >
                 <li>

@@ -18,7 +18,7 @@ function Blog() {
       : Blogs.filter((post) => post.category === activeCategory).slice(0, 3);
 
   return (
-    <div className="max-w-7xl mx-auto py-10 px-6">
+    <div className="flex justify-center flex-col py-10 px-6">
       <div className="flex items-center gap-2 text-gray-800 text-lg mb-6">
         <NavLink to="/" className="hover:text-blue-600">
           Home
@@ -35,8 +35,8 @@ function Blog() {
             key={category}
             className={`pb-2 text-lg ${
               activeCategory === category
-                ? "border-b-2 border-blue-500 text-blue-600"
-                : "hover:text-blue-600"
+                ? "border-b-2 border-blue-500 text-blue-600 cursor-pointer"
+                : "hover:text-blue-600 cursor-pointer"
             }`}
             onClick={() => setActiveCategory(category)}
           >
@@ -49,7 +49,7 @@ function Blog() {
         {filteredBlogs.map((post) => (
           <div
             key={post.id}
-            className="w-full sm:w-[48%] lg:w-[32%] shadow-lg rounded-xl overflow-hidden bg-white transition-transform transform hover:scale-105"
+            className="w-full sm:w-[48%] lg:w-[32%] shadow-lg rounded-xl overflow-hidden bg-white "
           >
             <div className="relative">
               <img
@@ -58,7 +58,7 @@ function Blog() {
                 className="w-full h-60 object-cover"
               />
 
-              <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
+              <span className="absolute bottom-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
                 {post.category}
               </span>
             </div>
