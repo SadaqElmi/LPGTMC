@@ -26,13 +26,13 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
         <img
           src={carImages[currentImageIndex]}
           alt={`${title} ${currentImageIndex + 1}`}
-          className="w-full h-[250px] object-cover p-2 rounded-2xl transition-opacity duration-500"
+          className="w-full h-[250px] object-cover p-2 rounded-3xl transition-opacity duration-500"
         />
         {/* Left Arrow as Link */}
         <Link
           to="#"
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 p-3 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-200 hover:scale-110 opacity-0 group-hover:opacity-100"
+          className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-200 hover:scale-110 opacity-0 group-hover:opacity-100"
         >
           <FaArrowLeft className="text-gray-700 transition-all group-hover:text-blue-400 duration-300" />
         </Link>
@@ -40,16 +40,16 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
         <Link
           to="#"
           onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 p-3 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-200 hover:scale-110 opacity-0 group-hover:opacity-100"
+          className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-200 hover:scale-110 opacity-0 group-hover:opacity-100"
         >
           <FaArrowRight className="text-gray-700 transition-all group-hover:text-blue-400 duration-300" />
         </Link>
         {/* Dots Indicator */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {carImages.map((_, index) => (
             <span
               key={index}
-              className={`w-3 h-3 rounded-full ${currentImageIndex === index ? "bg-blue-500" : "bg-gray-300"} transition-all`}
+              className={`w-6 h-1 rounded-2xl ${currentImageIndex === index ? "bg-white" : "bg-gray-300"} transition-all`}
             ></span>
           ))}
         </div>
@@ -66,7 +66,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             <FaUser className="mr-2 text-blue-400" />
             {capacity}
           </div>
-          <div className="flex items-center mr-32">
+          <div className="flex items-center mr-24">
             <FaGasPump className="mr-2 text-blue-400" />
             {hybrid}
           </div>
