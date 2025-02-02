@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Cars from "./pages/Cars/Cars.jsx";
 import HelperPage from "./pages/HelperCenter/HelperPage";
 import Blog from "./pages/Blogs/Components/Blogs.jsx";
+import Articles from "./pages/Blogs/Components/Articles.jsx"; // Import the Articles component
 
 const App = () => {
   return (
@@ -16,11 +17,12 @@ const App = () => {
             <Route path="/cars" element={<Cars />} />
             <Route path="/HelperPage" element={<HelperPage />} />
             <Route path="/Blogs" element={<Blog />} />
+            <Route path="/Blogs/:id" element={<Articles />} /> 
           </Route>
         </Routes>
       </Router>
     </div>
   );
-};
+}
 
 export default App;

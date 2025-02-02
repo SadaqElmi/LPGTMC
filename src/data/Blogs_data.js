@@ -18,6 +18,7 @@ export const Blogs = [
     description: "What’s required when renting a car?",
     date: "January 30, 2025",
     image: image8,
+    comments:4,
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const Blogs = [
       "How leading car manufacturers are embracing sustainability in production.",
     date: "January 29, 2025",
     image: image1,
+    comments: 2,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const Blogs = [
       "Top 5 DIY car maintenance tips to keep your vehicle in top condition.",
     date: "January 28, 2025",
     image: image3,
+    comments: 3,
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ export const Blogs = [
     description: "10 essential tools every car owner should have.",
     date: "January 27, 2025",
     image: image4,
+    comments: 1,
   },
   {
     id: 5,
@@ -49,6 +53,7 @@ export const Blogs = [
       "Comparing the latest sports cars of 2025 and their performance specs.",
     date: "January 26, 2025",
     image: image5,
+    comments: 5,
   },
   {
     id: 6,
@@ -57,6 +62,7 @@ export const Blogs = [
       "Inside Tesla’s new Gigafactory: Innovations in battery production.",
     date: "January 25, 2025",
     image: image6,
+    comments: 2,
   },
   {
     id: 7,
@@ -65,6 +71,7 @@ export const Blogs = [
       "When should you replace your car’s brake pads? Signs to watch for.",
     date: "January 24, 2025",
     image: image7,
+    comments: 4,
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ export const Blogs = [
     description: "How to save money on car insurance: Tips from experts.",
     date: "January 23, 2025",
     image: image9,
+    comments: 3,
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ export const Blogs = [
     description: "The rise of autonomous vehicles: Where are we now?",
     date: "January 22, 2025",
     image: image12,
+    comments: 2,
   },
   {
     id: 10,
@@ -86,6 +95,7 @@ export const Blogs = [
     description: "Ford vs. Chevrolet: Who is leading the electric revolution?",
     date: "January 21, 2025",
     image: image11,
+    comments: 4,
   },
   {
     id: 11,
@@ -93,6 +103,7 @@ export const Blogs = [
     description: "How to diagnose engine problems: A step-by-step guide.",
     date: "January 20, 2025",
     image: image22,
+    comments: 5,
   },
   {
     id: 12,
@@ -101,6 +112,7 @@ export const Blogs = [
       "Best mobile apps for tracking your car’s maintenance schedule.",
     date: "January 19, 2025",
     image: image13,
+    comments: 4,
   },
   {
     id: 13,
@@ -108,6 +120,7 @@ export const Blogs = [
     description: "Most fuel-efficient cars of 2025: Which ones make the list?",
     date: "January 18, 2025",
     image: image1,
+    comments: 3,
   },
   {
     id: 14,
@@ -115,6 +128,7 @@ export const Blogs = [
     description: "The story behind Rivian: Can it challenge Tesla?",
     date: "January 17, 2025",
     image: image8,
+    comments: 2,
   },
   {
     id: 15,
@@ -122,6 +136,7 @@ export const Blogs = [
     description: "How to change your car’s oil like a pro.",
     date: "January 16, 2025",
     image: image3,
+    comments: 3,
   },
   {
     id: 16,
@@ -129,6 +144,7 @@ export const Blogs = [
     description: "How to get the best resale value for your car.",
     date: "January 15, 2025",
     image: image4,
+    comments: 1,
   },
   {
     id: 17,
@@ -136,6 +152,7 @@ export const Blogs = [
     description: "Luxury car trends of 2025: What’s in and what’s out?",
     date: "January 14, 2025",
     image: image5,
+    comments: 5,
   },
   {
     id: 18,
@@ -143,6 +160,7 @@ export const Blogs = [
     description: "Toyota’s plan for hydrogen-powered vehicles.",
     date: "January 13, 2025",
     image: image6,
+    comments: 2,
   },
   {
     id: 19,
@@ -150,6 +168,7 @@ export const Blogs = [
     description: "The ultimate guide to tire maintenance and safety.",
     date: "January 12, 2025",
     image: image7,
+    comments: 4,
   },
   {
     id: 20,
@@ -158,6 +177,7 @@ export const Blogs = [
       "How to extend your car battery’s lifespan with simple habits.",
     date: "January 11, 2025",
     image: image9,
+    comments: 3,
   },
   {
     id: 21,
@@ -165,5 +185,6 @@ export const Blogs = [
     description: "What’s required when renting a car?",
     date: "January 30, 2025",
     image: image8,
+    comments: 4,
   },
 ];
