@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Blogs } from "../../../data/Blogs_data"; // ✅ Import mock data
+
 import {
   FaAngleDoubleRight,
   FaRegCalendarAlt,
@@ -86,6 +87,7 @@ function Blog() {
         ))}
       </div>
     </div>
+
   );
 }
 
