@@ -58,7 +58,9 @@ const BlogsSection = () => {
               <div className="flex items-center justify-between p-2">
                 <p className="text-gray-500 mb-2 flex items-center">
                   <FaRegCalendarAlt className="mr-2" /> {blog.date} {" "}
+                  
                 </p>
+                
                 <div>
                   <p className="text-gray-500 flex items-center">
                     <FaRegComment className="ml-2 mr-2 flex" /> {blog.comments}

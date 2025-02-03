@@ -82,15 +82,16 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
           </div>
         </div>
       <hr className="text-gray-300 text-xl mt-6" />
-        <div className="mt-6 flex justify-between items-center">
+        <div className="mt-2 flex justify-between items-center p-2">
           
-          <p className="text-lg font-bold text-gray-800">{price}</p>
-          <div className="flex items-center gap-2">
+          <p className="text-2xl  text-gray-800">{price}  </p>
+          <small className="text-gray-500 mr-8 mt-1">/month</small>
+          <div className="flex items-center gap-4">
             <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">
               <CiHeart className="text-blue-700 text-2xl transition-all duration-300" />
             </Link>
-            <button className="px-6 py-2 bg-blue-400 text-white rounded-lg hover:bg-blue-300 transition duration-300">
-              Rent Now
+            <button className="px-2 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300">
+              Rent now
             </button>
           </div>
         </div>
