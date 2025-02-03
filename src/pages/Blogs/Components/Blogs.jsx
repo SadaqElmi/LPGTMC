@@ -13,7 +13,8 @@ const categories = ["All News", "car", "company", "repair", "useful"];
 function Blog() {
   const [activeCategory, setActiveCategory] = useState("All News");
   const [visiblePosts, setVisiblePosts] = useState({
-    "All News": 6, // ✅ Default posts for "All News"
+    "All News": 6,
+
     car: 3,
     company: 3,
     repair: 3,
@@ -22,22 +23,22 @@ function Blog() {
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
-    setVisiblePosts((prev) => ({
-      ...prev,
-      [category]: category === "All News" ? 6 : 3, // Reset count per category
-    }));
   };
 
   const handleLoadMore = (category) => {
+    const totalPosts = Blogs.filter(
+      (post) =>
+        activeCategory === "All News" || post.category === activeCategory
+    ).length;
+
     setVisiblePosts((prev) => ({
       ...prev,
-      [category]: prev[category] + 3, // ✅ Load 3 more per click
+      [category]: totalPosts,
     }));
   };
 
   return (
-    <div className="flex justify-center flex-col py-10 px-6">
-      {/* Breadcrumb Navigation */}
+    <div className="max-w-7xl mx-auto py-10 px-6">
       <div className="flex items-center gap-2 text-gray-800 text-lg mb-6">
         <NavLink to="/" className="hover:text-blue-600">
           Home
@@ -46,15 +47,13 @@ function Blog() {
         <p className="font-semibold">Blog</p>
       </div>
 
-      {/* Page Title */}
-      <h1 className="text-5xl font-bold text-gray-900 mb-6">Our Blog</h1>
+      <h1 className="text-4xl  text-gray-900 mb-6">Our Blog</h1>
 
-      {/* Category Tabs */}
       <div className="flex gap-6 border-b pb-3 text-gray-600">
         {categories.map((category) => (
           <button
             key={category}
-            className={`pb-2 text-lg ${
+            className={`pb-2 text-lg font-medium ${
               activeCategory === category
                 ? "border-b-2 border-blue-500 text-blue-600 cursor-pointer"
                 : "hover:text-blue-600 cursor-pointer"
@@ -66,22 +65,22 @@ function Blog() {
         ))}
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 mt-6">
+      <div className="flex flex-wrap justify-start gap-6 mt-6">
         {Blogs.filter(
           (post) =>
             activeCategory === "All News" || post.category === activeCategory
         )
-          .slice(0, visiblePosts[activeCategory]) // ✅ Show limited posts per category
+          .slice(0, visiblePosts[activeCategory])
           .map((post) => (
             <div
               key={post.id}
-              className="w-full sm:w-[48%] lg:w-[32%] shadow-lg rounded-xl overflow-hidden bg-white"
+              className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden transition hover:shadow-lg"
             >
               <div className="relative">
                 <img
                   src={post.image}
                   alt={post.description}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-60 object-cover rounded-t-xl"
                 />
 
                 <span className="absolute bottom-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full">
@@ -92,7 +91,7 @@ function Blog() {
               <div className="p-5">
                 <NavLink
                   to="#"
-                  className="hover:text-blue-700 text-gray-800 text-xl font-semibold block"
+                  className="hover:text-blue-700 text-gray-800 text-lg font-semibold block leading-snug"
                 >
                   {post.description}
                 </NavLink>
