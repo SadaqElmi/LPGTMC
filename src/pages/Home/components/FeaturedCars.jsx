@@ -84,7 +84,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
       <hr className="text-gray-300 text-xl mt-6" />
         <div className="mt-2 flex justify-between items-center p-2">
           
-          <p className="text-2xl  text-gray-800">{price}  </p>
+          <p className="text-2xl  text-gray-800">{price} </p>
           <small className="text-gray-500 mr-8 mt-1">/month</small>
           <div className="flex items-center gap-4">
             <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">
