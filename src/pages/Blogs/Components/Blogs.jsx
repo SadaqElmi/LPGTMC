@@ -84,12 +84,12 @@ function Blog() {
           .map((post) => (
             <div
               key={post.id}
-              className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:scale-[1.02]"
+              className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden "
             >
               <div className="relative">
                 <img
                   src={post.image}
-                  alt={post.description}
+                  alt={post.title}
                   className="w-full h-60 object-cover rounded-t-xl"
                 />
                 <span className="absolute bottom-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full transition-all duration-300 hover:scale-110">
@@ -102,7 +102,7 @@ function Blog() {
                   to="#"
                   className="hover:text-blue-700 text-gray-800 text-md transition-all duration-300"
                 >
-                  {post.description}
+                  {post.title}
                 </NavLink>
 
                 <div className="flex justify-between items-center mt-3 text-gray-500 text-sm">

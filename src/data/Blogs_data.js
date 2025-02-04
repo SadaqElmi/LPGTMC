@@ -15,15 +15,15 @@ export const Blogs = [
   {
     id: 1,
     category: "car",
-    description: "What’s required when renting a car?",
+    title: "What’s required when renting a car?",
     date: "January 30, 2025",
     image: image8,
-    comments:4,
+    comments: 4,
   },
   {
     id: 2,
     category: "company",
-    description:
+    title:
       "How leading car manufacturers are embracing sustainability in production.",
     date: "January 29, 2025",
     image: image1,
@@ -32,7 +32,7 @@ export const Blogs = [
   {
     id: 3,
     category: "repair",
-    description:
+    title:
       "Top 5 DIY car maintenance tips to keep your vehicle in top condition.",
     date: "January 28, 2025",
     image: image3,
@@ -41,7 +41,7 @@ export const Blogs = [
   {
     id: 4,
     category: "useful",
-    description: "10 essential tools every car owner should have.",
+    title: "10 essential tools every car owner should have.",
     date: "January 27, 2025",
     image: image4,
     comments: 1,
@@ -49,7 +49,7 @@ export const Blogs = [
   {
     id: 5,
     category: "car",
-    description:
+    title:
       "Comparing the latest sports cars of 2025 and their performance specs.",
     date: "January 26, 2025",
     image: image5,
@@ -58,8 +58,7 @@ export const Blogs = [
   {
     id: 6,
     category: "company",
-    description:
-      "Inside Tesla’s new Gigafactory: Innovations in battery production.",
+    title: "Inside Tesla’s new Gigafactory: Innovations in battery production.",
     date: "January 25, 2025",
     image: image6,
     comments: 2,
@@ -67,8 +66,7 @@ export const Blogs = [
   {
     id: 7,
     category: "repair",
-    description:
-      "When should you replace your car’s brake pads? Signs to watch for.",
+    title: "When should you replace your car’s brake pads? Signs to watch for.",
     date: "January 24, 2025",
     image: image7,
     comments: 4,
@@ -76,7 +74,7 @@ export const Blogs = [
   {
     id: 8,
     category: "useful",
-    description: "How to save money on car insurance: Tips from experts.",
+    title: "How to save money on car insurance: Tips from experts.",
     date: "January 23, 2025",
     image: image9,
     comments: 3,
@@ -84,7 +82,7 @@ export const Blogs = [
   {
     id: 9,
     category: "car",
-    description: "The rise of autonomous vehicles: Where are we now?",
+    title: "The rise of autonomous vehicles: Where are we now?",
     date: "January 22, 2025",
     image: image12,
     comments: 2,
@@ -92,7 +90,7 @@ export const Blogs = [
   {
     id: 10,
     category: "company",
-    description: "Ford vs. Chevrolet: Who is leading the electric revolution?",
+    title: "Ford vs. Chevrolet: Who is leading the electric revolution?",
     date: "January 21, 2025",
     image: image11,
     comments: 4,
@@ -100,7 +98,7 @@ export const Blogs = [
   {
     id: 11,
     category: "repair",
-    description: "How to diagnose engine problems: A step-by-step guide.",
+    title: "How to diagnose engine problems: A step-by-step guide.",
     date: "January 20, 2025",
     image: image22,
     comments: 5,
@@ -108,8 +106,7 @@ export const Blogs = [
   {
     id: 12,
     category: "useful",
-    description:
-      "Best mobile apps for tracking your car’s maintenance schedule.",
+    title: "Best mobile apps for tracking your car’s maintenance schedule.",
     date: "January 19, 2025",
     image: image13,
     comments: 4,
@@ -117,7 +114,7 @@ export const Blogs = [
   {
     id: 13,
     category: "car",
-    description: "Most fuel-efficient cars of 2025: Which ones make the list?",
+    title: "Most fuel-efficient cars of 2025: Which ones make the list?",
     date: "January 18, 2025",
     image: image1,
     comments: 3,
@@ -125,7 +122,7 @@ export const Blogs = [
   {
     id: 14,
     category: "company",
-    description: "The story behind Rivian: Can it challenge Tesla?",
+    title: "The story behind Rivian: Can it challenge Tesla?",
     date: "January 17, 2025",
     image: image8,
     comments: 2,
@@ -133,7 +130,7 @@ export const Blogs = [
   {
     id: 15,
     category: "repair",
-    description: "How to change your car’s oil like a pro.",
+    title: "How to change your car’s oil like a pro.",
     date: "January 16, 2025",
     image: image3,
     comments: 3,
@@ -141,7 +138,7 @@ export const Blogs = [
   {
     id: 16,
     category: "useful",
-    description: "How to get the best resale value for your car.",
+    title: "How to get the best resale value for your car.",
     date: "January 15, 2025",
     image: image4,
     comments: 1,
@@ -149,7 +146,7 @@ export const Blogs = [
   {
     id: 17,
     category: "car",
-    description: "Luxury car trends of 2025: What’s in and what’s out?",
+    title: "Luxury car trends of 2025: What’s in and what’s out?",
     date: "January 14, 2025",
     image: image5,
     comments: 5,
@@ -157,7 +154,7 @@ export const Blogs = [
   {
     id: 18,
     category: "company",
-    description: "Toyota’s plan for hydrogen-powered vehicles.",
+    title: "Toyota’s plan for hydrogen-powered vehicles.",
     date: "January 13, 2025",
     image: image6,
     comments: 2,
@@ -165,7 +162,7 @@ export const Blogs = [
   {
     id: 19,
     category: "repair",
-    description: "The ultimate guide to tire maintenance and safety.",
+    title: "The ultimate guide to tire maintenance and safety.",
     date: "January 12, 2025",
     image: image7,
     comments: 4,
@@ -173,8 +170,7 @@ export const Blogs = [
   {
     id: 20,
     category: "useful",
-    description:
-      "How to extend your car battery’s lifespan with simple habits.",
+    title: "How to extend your car battery’s lifespan with simple habits.",
     date: "January 11, 2025",
     image: image9,
     comments: 3,
@@ -182,7 +178,7 @@ export const Blogs = [
   {
     id: 21,
     category: "car",
-    description: "What’s required when renting a car?",
+    title: "What’s required when renting a car?",
     date: "January 30, 2025",
     image: image8,
     comments: 4,
