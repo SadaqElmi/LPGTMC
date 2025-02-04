@@ -43,7 +43,7 @@ const ExploreCars = () => {
         ([key, value]) =>
           key === "keyword" || value === "" || car[key].toString() === value
       )
-  ).slice(0, 6); // Display only 6 cars
+  ).slice(); 
 
   return (
   
