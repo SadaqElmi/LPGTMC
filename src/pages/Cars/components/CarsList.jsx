@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { FaUser, FaCar, FaCog, FaGasPump } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 
 const CarsList = ({ cars }) => {
   const [visibleCars, setVisibleCars] = useState(6); // Show first 6 cars initially
+  const navigate = useNavigate();
 
   const handleLoadMore = () => {
     setVisibleCars((prev) => prev + 6); // Load 6 more cars on each click
+  };
+
+  const handleRentNow = (id) => {
+    navigate(`/cars/${id}`);
   };
 
   return (
@@ -47,7 +52,10 @@ const CarsList = ({ cars }) => {
                 <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">
                   <CiHeart className="text-blue-700 text-2xl transition-all duration-300" />
                 </Link>
-                <button className="px-2 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300">
+                <button
+                  onClick={() => handleRentNow(car.id)}
+                  className="px-2 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300"
+                >
                   Rent now
                 </button>
               </div>
