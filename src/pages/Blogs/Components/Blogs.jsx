@@ -72,7 +72,7 @@ function Blog() {
           .map((post) => (
             <div
               key={post.id}
-              className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:scale-[1.02]"
+              className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden "
             >
               <div className="relative">
                 <NavLink to={`/articles/${post.id}`}>

@@ -67,10 +67,6 @@ const Articles = () => {
       <h1 className="text-4xl font-bold mt-6 mb-4 leading-tight">
         {blog.title}
       </h1>
-
-      <p className="text-gray-700 mt-4">{blog.content}</p>
-
-      <h2 className="text-4xl text-gray-700 mt-8">Keep Reading (H2)</h2>
       <p className="mt-4 text-gray-700">
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. The point of
@@ -270,7 +266,6 @@ const Articles = () => {
           </p>
         </div>
 
-        
         <p className="text-gray-700 mt-3">
           It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining essentially unchanged. It was

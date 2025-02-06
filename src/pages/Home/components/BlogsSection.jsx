@@ -66,13 +66,12 @@ const BlogsSection = () => {
 
             {/* Blog Content */}
             <div className="p-4">
-              <h2 className="text-xl font-bold text-gray-800 mb-2">
+              <p className="text-gray-600 mb-4 hover:text-blue-500">
                 {blog.title}
-              </h2>
-              <p className="text-gray-600 mb-4">{blog.description}</p>
+              </p>
               <div className="flex items-center justify-between p-2">
                 <p className="text-gray-500 mb-2 flex items-center">
-                  <FaRegCalendarAlt className="mr-2" /> {blog.date}{" "}
+                  <FaRegCalendarAlt className="mr-2" /> {blog.date}
                 </p>
                 <div>
                   <p className="text-gray-500 flex items-center">
