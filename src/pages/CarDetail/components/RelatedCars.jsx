@@ -56,7 +56,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
       </div>
 
       {/* Car Info */}
-      <div className="p-6">
+      <div className="p-4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold text-gray-800">{title}</h2>
           <span className="text-sm text-gray-600 border border-blue-400 border-dashed px-2 py-1 rounded-lg">{year}</span>
@@ -90,7 +90,7 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">
               <CiHeart className="text-blue-700 text-2xl transition-all duration-300" />
             </Link>
-            <button className="px-2 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300">
+            <button className="px-2 py-2   bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300">
               Rent now
             </button>
           </div>
