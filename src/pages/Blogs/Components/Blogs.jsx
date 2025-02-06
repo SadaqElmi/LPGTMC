@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Blogs } from "../../../data/Blogs_data";
-
 import {
   FaAngleDoubleRight,
   FaRegCalendarAlt,
@@ -20,14 +19,8 @@ function Blog() {
     useful: 3,
   });
 
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
   const handleCategoryChange = (category) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveCategory(category);
-      setIsTransitioning(false);
-    }, 300);
+    setActiveCategory(category);
   };
 
   const handleLoadMore = (category) => {
@@ -44,7 +37,6 @@ function Blog() {
 
   return (
     <div className="max-w-7xl mx-auto py-10 px-6">
-      {/* Breadcrumb Navigation */}
       <div className="flex items-center gap-2 text-gray-800 text-[12px] mb-6">
         <NavLink to="/" className="hover:text-blue-600 transition duration-300">
           Home
@@ -71,11 +63,7 @@ function Blog() {
         ))}
       </div>
 
-      <div
-        className={`flex flex-wrap justify-center gap-6 mt-6 transition-opacity duration-500 ${
-          isTransitioning ? "opacity-0" : "opacity-100"
-        }`}
-      >
+      <div className="flex flex-wrap justify-center gap-6 mt-6">
         {Blogs.filter(
           (post) =>
             activeCategory === "All News" || post.category === activeCategory
@@ -87,23 +75,21 @@ function Blog() {
               className="w-full sm:w-[48%] lg:w-[31%] bg-white shadow-md rounded-xl overflow-hidden transition-all duration-500 hover:shadow-lg hover:scale-[1.02]"
             >
               <div className="relative">
-                <img
-                  src={post.image}
-                  alt={post.description}
-                  className="w-full h-60 object-cover rounded-t-xl"
-                />
+                <NavLink to={`/articles/${post.id}`}>
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-60 object-cover rounded-t-xl cursor-pointer"
+                  />
+                </NavLink>
+
                 <span className="absolute bottom-4 left-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full transition-all duration-300 hover:scale-110">
                   {post.category}
                 </span>
               </div>
 
               <div className="p-5">
-                <NavLink
-                  to="#"
-                  className="hover:text-blue-700 text-gray-800 text-md transition-all duration-300"
-                >
-                  {post.description}
-                </NavLink>
+                <h2 className="text-gray-800 text-md">{post.title}</h2>
 
                 <div className="flex justify-between items-center mt-3 text-gray-500 text-sm">
                   <div className="flex items-center gap-2">
