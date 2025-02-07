@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { BiUser } from "react-icons/bi";
+import { BiSearch, BiUser } from "react-icons/bi";
 import {
   LuBuilding2,
   LuChevronDown,
@@ -22,12 +22,9 @@ const Header = () => {
         setisLeft(false); // Close the dropdown
       }
     };
-    // Add event listener when the dropdown is open
     if (isLeft) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
-    // Cleanup the event listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -45,16 +42,21 @@ const Header = () => {
         setisPages(false); // Close the dropdown
       }
     };
-    // Add event listener when the dropdown is open
     if (isPages) {
       document.addEventListener("mousedown", handleClickOutside);
     }
-
-    // Cleanup the event listener
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isPages]);
+
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = () => {
+    // Implement search functionality
+    console.log("Searching for:", searchQuery);
+    // Redirect to search results page or filter cars based on searchQuery
+  };
 
   return (
     <>
@@ -84,7 +86,6 @@ const Header = () => {
             style={{ position: "relative", display: "inline-block" }}
             ref={dropPages}
           >
-            {/* Button to toggle the dropdown */}
             <button
               onClick={togglePages}
               className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-1"
@@ -94,7 +95,6 @@ const Header = () => {
                 <LuChevronDown />
               </span>
             </button>
-            {/* Dropdown list */}
             {isPages && (
               <ul
                 style={{
@@ -153,7 +153,7 @@ const Header = () => {
                     to="/"
                     className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
                   >
-                    Princing Plans
+                    Pricing Plans
                   </Link>
                 </li>
                 <li>
@@ -174,13 +174,28 @@ const Header = () => {
               8 800 234 56 78
             </span>
             <span className="text-[10px] text-[#4e5d78]">
-              {" "}
               Mom - Sat: 9:00 am - 6:00 pm
             </span>
           </div>
           <button className="bg-[#189cf4] text-white px-4 py-2 rounded-xl">
             <Link to="/cars">Explore cars</Link>
           </button>
+          {/* Search Input and Button */}
+          <div className="flex items-center relative overflow-hidden ">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search cars..."
+              className="p-2 border-2 border-blue-500 outline-none rounded-l-md rounded-r-md overflow-hidden"
+            />
+            <button
+              onClick={handleSearch}
+              className="bg-blue-500 text-white right-[1px] px-2 rounded py-4 absolute rounded-r-xl"
+            >
+              <BiSearch className="text-[20px]" />
+            </button>
+          </div>
           <div
             style={{ position: "relative", display: "inline-block" }}
             ref={dropLeft}
@@ -246,7 +261,7 @@ const Header = () => {
                     className="cursor-pointer font-['Nunito', sans-serif] text-[15px] text-[#4e5d78] font-[400] hover:text-blue-400 flex items-center gap-2"
                   >
                     <LuLogIn />
-                    <span>Sing Out</span>
+                    <span>Sign Out</span>
                   </Link>
                 </li>
               </ul>
