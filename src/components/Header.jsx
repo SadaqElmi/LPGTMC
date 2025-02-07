@@ -8,6 +8,7 @@ import {
 } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo/logo.svg";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -137,13 +138,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/CarDetails"
-                    className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
-                  >
-                    CarDetails
-                  </Link>
-                </li>
+                <Link
+                  to="/"
+                  className="p-[10px] cursor-pointer font-['Nunito', sans-serif] text-[14px] text-[#4e5d78] font-[400] hover:text-blue-400"
+                >
+                  CarDetails
+                </Link>
+              </li>
               </ul>
             )}
           </div>
