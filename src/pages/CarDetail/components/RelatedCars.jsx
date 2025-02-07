@@ -1,12 +1,31 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaArrowLeft, FaUser, FaLeaf, FaCar, FaCog, FaGasPump, FaHeart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import {
+  FaArrowRight,
+  FaArrowLeft,
+  FaUser,
+  FaLeaf,
+  FaCar,
+  FaCog,
+  FaGasPump,
+  FaHeart,
+} from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { Cars } from "../../../data/Car_data"; // Ensure this path is correct
 import { CiHeart } from "react-icons/ci";
 
-const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmission, price }) => {
+const CarCard = ({
+  carImages,
+  title,
+  year,
+  capacity,
+  hybrid,
+  mileage,
+  transmission,
+  price,
+  id,
+}) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
+  const navigate = useNavigate();
   // Handle next image
   const handleNext = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % carImages.length);
@@ -18,7 +37,10 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
       prevIndex === 0 ? carImages.length - 1 : prevIndex - 1
     );
   };
-
+  const handleRentNow = (event, id) => {
+    event.preventDefault();
+    navigate(`/cars/${id}`);
+  };
   return (
     <div className="max-w-sm bg-[#edf1f7] border-2 border-white rounded-2xl shadow-lg overflow-hidden mx-2 group">
       <div className="relative">
@@ -49,7 +71,9 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
           {carImages.map((_, index) => (
             <span
               key={index}
-              className={`w-6 h-1 rounded-2xl ${currentImageIndex === index ? "bg-white" : "bg-gray-300"} transition-all`}
+              className={`w-6 h-1 rounded-2xl ${
+                currentImageIndex === index ? "bg-white" : "bg-gray-300"
+              } transition-all`}
             ></span>
           ))}
         </div>
@@ -59,7 +83,9 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
       <div className="p-4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold text-gray-800">{title}</h2>
-          <span className="text-sm text-gray-600 border border-blue-400 border-dashed px-2 py-1 rounded-lg">{year}</span>
+          <span className="text-sm text-gray-600 border border-blue-400 border-dashed px-2 py-1 rounded-lg">
+            {year}
+          </span>
         </div>
         <div className="flex justify-between text-sm text-gray-600">
           <div className="flex items-center">
@@ -81,16 +107,21 @@ const CarCard = ({ carImages, title, year, capacity, hybrid, mileage, transmissi
             {transmission}
           </div>
         </div>
-      <hr className="text-gray-300 text-xl mt-6" />
+        <hr className="text-gray-300 text-xl mt-6" />
         <div className="mt-2 flex justify-between items-center p-2">
-          
           <p className="text-2xl  text-gray-800">{price} </p>
           <small className="text-gray-500 mr-8 mt-1">/month</small>
           <div className="flex items-center gap-4">
-            <Link to="#" className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center">
+            <Link
+              to="#"
+              className="bg-blue-200 p-2 rounded-2xl shadow-md hover:bg-red-200 transition duration-300 flex items-center justify-center"
+            >
               <CiHeart className="text-blue-700 text-2xl transition-all duration-300" />
             </Link>
-            <button className="px-2 py-2   bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300">
+            <button
+              onClick={(event) => handleRentNow(event, id)}
+              className="px-2 py-2 bg-blue-500 text-white rounded-xl hover:bg-blue-300 transition duration-300"
+            >
               Rent now
             </button>
           </div>
@@ -110,16 +141,16 @@ const RelatedCars = () => {
             to="/cars"
             className="text-gray-600 flex items-center gap-1 cursor-pointer hover:text-gray-800"
           >
-            View more 
+            View more
             <FaArrowRight className="ml-2 text-gray-500 hover:text-blue-400 transition-all duration-200" />
           </Link>
         </div>
       </div>
       <div className="mt-8 px-28">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Cars.slice(0, 6).map((car, index) => (
+          {Cars.slice(0, 6).map((car) => (
             <CarCard
-              key={index}
+              key={car.id} // Use a unique identifier from the car object
               carImages={car.carImages}
               title={car.name}
               year={car.year}
@@ -128,6 +159,7 @@ const RelatedCars = () => {
               mileage={car.speed}
               transmission={car.transmission}
               price={car.price}
+              id={car.id} // Pass the car's unique ID as a prop
             />
           ))}
         </div>
