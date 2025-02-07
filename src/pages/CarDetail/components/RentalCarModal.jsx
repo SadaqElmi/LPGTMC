@@ -45,7 +45,7 @@ const RentalCarModal = ({ isOpen, onClose }) => {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Enter your full name"
-              className="w-full mt-1 p-2 border rounded-lg"
+              className="w-full mt-1 p-2  outline-none rounded-lg"
               required
             />
           </div>
@@ -59,7 +59,7 @@ const RentalCarModal = ({ isOpen, onClose }) => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="090 123 45 67"
-              className="w-full mt-1 p-2 border rounded-lg"
+              className="w-full mt-1 p-2 rounded-lg outline-none"
               required
             />
           </div>
@@ -72,7 +72,7 @@ const RentalCarModal = ({ isOpen, onClose }) => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full mt-1 p-2 border rounded-lg bg-gray-100"
+              className="w-full mt-1 p-2  rounded-lg bg-gray-100  outline-none"
               readOnly
             />
           </div>

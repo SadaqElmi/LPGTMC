@@ -27,9 +27,9 @@ const CarInfo = () => {
   };
 
   return (
-    <div className="py-2 m-auto p-4">
+    <div className="m-auto py-2 ">
       <h1 className="text-3xl text-gray-800 mb-4">{car.name}</h1>
-      <div className="w-full   rounded-2xl shadow-lg p-2 border border-white ">
+      <div className="w-[640px] rounded-2xl shadow-lg p-2 border border-white  ">
         <div className="relative">
           <img
             src={car.carImages[currentImageIndex]}
@@ -48,7 +48,7 @@ const CarInfo = () => {
           >
             <FaArrowRight className="text-gray-700 transition-all hover:text-blue-400 duration-300" />
           </button>
-          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {car.carImages.map((_, index) => (
               <span
                 key={index}
@@ -63,7 +63,7 @@ const CarInfo = () => {
               key={index}
               src={image}
               alt={`${car.name} ${index + 1}`}
-              className={`w-full h-32 object-cover rounded-lg cursor-pointer transition-opacity duration-300 ${currentImageIndex === index ? "opacity-100 border-2 border-blue-500" : "opacity-50 border-2 border-transparent"}`}
+              className={`w-full h-28 object-cover rounded-2xl cursor-pointer transition-opacity duration-300 ${currentImageIndex === index ? "opacity-100 border-2 border-blue-500" : "opacity-50 border-2 border-transparent"}`}
               onClick={() => handleThumbnailClick(index)}
             />
           ))}

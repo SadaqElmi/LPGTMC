@@ -80,7 +80,7 @@ const CarCard = ({
       </div>
 
       {/* Car Info */}
-      <div className="p-6">
+      <div className="p-4">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold text-gray-800">{title}</h2>
           <span className="text-sm text-gray-600 border border-blue-400 border-dashed px-2 py-1 rounded-lg">
