@@ -7,7 +7,7 @@ import {
   LuSettings,
 } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo/logo.svg";
+import Logo from "../Assets/Logo/logo.svg";
 
 const Header = () => {
   const [isLeft, setisLeft] = useState(false);
